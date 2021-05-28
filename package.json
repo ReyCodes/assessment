@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "npm run clean:reports && npx cypress-tags run --headless --browser chrome -e TAGS=\"@assesment\" || npm run generate:html:report",
-    "test:windows": "npx cypress-tags run --headless --browser chrome -e TAGS=\"@assesment\" || npm run generate:html:report",
+    "test:windows": "npx cypress-tags run --headless --browser chrome -e TAGS=\"@assesment\"",
     "clean:reports": "mkdir -p mochawesome-report/ && rm -R -f mochawesome-report/* && mkdir -p TestReport/ && rm -rf TestReport/*",
     "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-test-report.json",
     "create:html:report": "marge --reportDir TestReport cypress-test-report.json",
